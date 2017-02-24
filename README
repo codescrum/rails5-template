@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails 5.0.1 starter application.
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+Runs under Ruby 2.3.1 (check .ruby-version file)
 
-* System dependencies
+## System dependencies
 
-* Configuration
+## Getting started
 
-* Database creation
+1. Clone this project
+2. Run `bundle install`
+3. Copy configuration files, example:
 
-* Database initialization
+All configuration files are .gitignored, there are example files for all using
+the following naming convention:
 
-* How to run the test suite
+_<filename>.example_
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+cp config/database-postgresql.yml.example config/database.yml
+```
 
-* Deployment instructions
+4. Configure database connections parameters accordingly
+5. Run `rake db:create`
 
-* ...
+## Running specs
+
+TODO
+
+## Third party services
+
+TODO
+
+## Deployment instructions
+
+TODO
