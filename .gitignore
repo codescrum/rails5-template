@@ -75,6 +75,14 @@ config/cable.yml
 .env.local
 .env.staging
 .env.production
+.env.development
+
+# also ignore and any other one, including local overrides (for clarity)
+.env.*
+.env.*.local
+
+# EXCEPT ANY example files
+!*.example
 
 ###################################################
 # All logs and tmp                                #
