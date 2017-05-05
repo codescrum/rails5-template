@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: rails5-template_development
+  database: <%= ENV["MYSQL_DEVELOPMENT_DATABASE"] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails5-template_test
+  database: <%= ENV["MYSQL_TEST_DATABASE"] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -45,10 +45,10 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+#     url: <%= ENV["MYSQL_DATABASE_URL"] %>
 #
 production:
   <<: *default
-  database: rails5-template_production
-  username: rails5-template
-  password: <%= ENV['RAILS5-TEMPLATE_DATABASE_PASSWORD'] %>
+  database: <%= ENV["MYSQL_PRODUCTION_DATABASE"] %>
+  username: <%= ENV["MYSQL_PRODUCTION_USER"] %>
+  password: <%= ENV["MYSQL_PRODUCTION_DATABASE_PASSWORD"] %>
